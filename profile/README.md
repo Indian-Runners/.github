@@ -12,18 +12,27 @@ together, so you work on functionality instead of plumbing.
 [![Docker Compose](https://img.shields.io/badge/docker%20compose-2496ED?style=flat-square&logo=docker&logoColor=white)](https://docs.docker.com/compose/)
 [![Vue.js](https://img.shields.io/badge/vue.js-42b883?style=flat-square&logo=vuedotjs&logoColor=white)](https://vuejs.org/)
 
+![NYX overview](https://raw.githubusercontent.com/snuids/nyx/master/medias/overview.gif)
+
 ## What NYX does
 
-- **Turn raw files into queryable data.** XLS importer and Apache Camel workers clean,
-  reshape and load incoming data automatically.
+- **Normalize incoming data.** Apache Camel workers clean, reshape and load data
+  automatically, so what lands in the database is ready to query.
 - **Answer questions without building infrastructure.** Kibana, Grafana, Jupyter notebooks
   and Vega visualizations all read the same data.
 - **Ship paper reports on a schedule.** Jasper-based runners generate PDF/XLS reports on a
   timer and store them for download.
-- **Know when something breaks.** ElastAlert rules, container monitoring and centralized
-  logs keep watch over the platform.
+- **Know when something breaks.** Container monitoring, metrics and centralized logs keep
+  watch over the platform.
 - **Everything talks through a broker.** ActiveMQ carries ingestion, report and status
   messages between components, so pieces can be replaced independently.
+
+## Analytics, on the data you already have
+
+![Jupyter notebooks querying the NYX data](https://raw.githubusercontent.com/snuids/nyx/master/medias/overview-apps.gif)
+
+Kibana and Grafana dashboards, Jupyter notebooks and Vega specs are all first-class clients
+of the same Elasticsearch and PostgreSQL stores — no extract, no second copy of the data.
 
 ## Components hosted here
 
